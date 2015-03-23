@@ -7,10 +7,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="javascript">
         $.ajax({
-            headers: { 'X-Auth-Token': '27face3f1ca54d3e9d2059538980f951' },
+            headers: { 'X-Auth-Token': 'YOUR_TOKEN' },
             url: 'http://api.football-data.org/alpha/fixtures?timeFrame=n1',
             dataType: 'json',
-            type: 'GET',
+            type: 'GET'
         }).done(function(response) {
             // do something with the response, e.g. isolate the id of a linked resource
             var regex = /.*?(\d+)$/; // the ? makes the first part non-greedy
@@ -21,12 +21,6 @@
     </script>
 </head>
 <body>
-<form action="">
-    <input id="Button1" type="button" value="Rechercher" onclick="call()"/>
-    <input id="ville" type="text"/>
-</form>
-<div id="data">
-    <span id="meteo"></span>
-</div>
+
 </body>
 </html>
