@@ -19,7 +19,7 @@
     }
 
 	function call(){
-		var page = "http://api.openweathermap.org/data/2.5/weather?q="+document.getElementById("ville").value;
+		var page = "http://api.openweathermap.org/data/2.5/weather?q="+document.getElementById("ville").value+"&lang=fr&units=metric";
 		connect(page);
 	}
 
