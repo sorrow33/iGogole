@@ -24,6 +24,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+        function choisir()
+        {
+            var choix = window.prompt("rechercher", "");
+            var fr = document.getElementById("ytplayer");
+            fr.src = "http://www.youtube.com/embed?listType=search&list=" + choix;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -56,19 +66,25 @@
         <div class="col-md-4 bg-primary">Heure et date
         <iframe src="modules/dateWidget.html"></iframe> </div>
         <div class="col-md-4 bg-success">Météo</div>
-        <div class="col-md-4 bg-info">
+        <div class="col-md-4 bg-primary">
             Flickr
             <iframe src="modules/flickrWidget.html"></iframe></div>
     </div>
     <div class="row">
-        <div class="col-md-4 bg-warning">Twitter</div>
-        <div class="col-md-4 bg-primary">Youtube</div>
+        <div class="col-md-4 bg-success">Twitter</div>
+        <div class="col-md-4 bg-primary">Youtube
+            <input type="button" value="Rechercher" onclick="choisir();" />
+
+            <iframe id="ytplayer" type="text/html" width="350" height="200"
+                    src="http://www.youtube.com/embed?listType=search&list=NBF"
+                    frameborder="0"></iframe>
+        </div>
         <div class="col-md-4 bg-success">Aaaa</div>
     </div>
     <div class="row">
         <div class="col-md-4 bg-primary">Infos sportives</div>
         <div class="col-md-4 bg-success">Soundcloud</div>
-        <div class="col-md-4 bg-info">Ajouter widgets</div>
+        <div class="col-md-4 bg-primary">Ajouter widgets</div>
     </div>
 
 </div><!-- /.container -->
